@@ -3,6 +3,9 @@ package com.mmall.common;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @author solang
  * 需求：项目里面会涉及到数据请求，页面请求，页面请求的话直接返回页面即可
@@ -42,7 +45,9 @@ public class JsonData {
 
     //有时不需要传入msg，因为已经成功了，只需要把成功的数据返回就可以了
     public static JsonData success(Object object){
-        return new JsonData(true);
+        JsonData jsonData = new JsonData(true);
+        jsonData.data = object;
+        return jsonData;
     }
 
     //有时连成功的数据都不需要返回
@@ -55,5 +60,14 @@ public class JsonData {
         JsonData JsonData = new JsonData(false);
         JsonData.msg = msg;
         return JsonData;
+    }
+
+    //
+    public Map<String, Object> toMap(){
+        HashMap<String, Object> result = new HashMap<>();
+        result.put("ret", ret);
+        result.put("msg", msg);
+        result.put("data", data);
+        return result;
     }
 }
