@@ -100,12 +100,15 @@
             <version>3.5</version>
         </dependency>
 
+        <!--Mybatis-plus-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.0.5</version>
             <optional>true</optional>
         </dependency>
+
+        <!--MySql-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
