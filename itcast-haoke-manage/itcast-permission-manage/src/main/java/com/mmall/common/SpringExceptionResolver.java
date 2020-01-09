@@ -1,6 +1,7 @@
 package com.mmall.common;
 
 import com.mmall.exception.PermissionException;
+import com.mmall.exception.paramException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.HandlerExceptionResolver;
@@ -44,7 +45,7 @@ public class SpringExceptionResolver implements HandlerExceptionResolver {
         if(url.endsWith(".json")) {
             //什么时候该使用默认的msg（defaultMsg）？什么时候又该使用自己抛出来的自定义msg？
             //只有当抛出来的是自己定义的异常时，我们才认为msg是需要直接给用户的，否则都要使用默认的msg代替
-            if (ex instanceof PermissionException) {
+            if (ex instanceof PermissionException || ex instanceof paramException) {
                 //将异常提交JsonData返回前台
                 JsonData result = JsonData.fail(ex.getMessage());
                 //为什么要有个toMap方法？因为ModelAndView类里面，允许你传入viewName的同时还可以传入一个map的值
