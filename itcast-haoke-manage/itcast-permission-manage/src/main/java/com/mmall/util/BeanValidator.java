@@ -14,7 +14,7 @@ import java.util.*;
 
 /**
  * @author solang
- * 在接口处使用注解的方式对 Java Bean （单个类）进行约束验证
+ * 在接口处请求进来的时候使用注解的方式对 Java Bean （单个类参数）进行约束验证
  * @date 2020-01-09 9:20
  */
 public class BeanValidator {
@@ -25,7 +25,7 @@ public class BeanValidator {
     /*
      * 孙延楠
      * @Param: [t：可以传入很多类型进来, groups：回头再讲]
-     * @Return: java.util.Map<java.lang.String,java.lang.String>：key：相当于告知哪个字段有问题，value：有什么问题
+     * @Return: Map<Key, Value>：Key：相当于告知哪个字段有问题，Value：有什么问题
      * @Author: Administrator
      * @Date: 2020/1/9 9:38
      */
@@ -42,8 +42,8 @@ public class BeanValidator {
             //划重点：将里面值输出
             LinkedHashMap errors = Maps.newLinkedHashMap();
             Iterator iterator = validateResult.iterator();
+            //hasNext():判断是否存在下一个元素,如有值则取出
             while (iterator.hasNext()) {
-                //hasNext():判断是否存在下一个元素,如有值则取出
                 ConstraintViolation violation = (ConstraintViolation) iterator.next();
                 //封装校验数据
                 errors.put(violation.getPropertyPath().toString(), violation.getMessage());

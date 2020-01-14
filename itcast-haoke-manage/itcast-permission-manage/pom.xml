@@ -12,18 +12,10 @@
     <artifactId>itcast-permission-manage</artifactId>
 
     <dependencies>
-
         <!--springboot的web支持-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
         </dependency>
 
         <!--jsp-->
@@ -44,31 +36,12 @@
             <version>1.18.2</version>
         </dependency>
 
-        <!-- Jackson -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.datatype</groupId>
-            <artifactId>jackson-datatype-guava</artifactId>
-            <version>2.5.3</version>
-        </dependency>
-
         <!-- logback -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
             <version>1.1.8</version>
         </dependency>
-
-        <!-- validator -->
-        <!--<dependency>-->
-        <!--<groupId>javax.validation</groupId>-->
-        <!--<artifactId>validation-api</artifactId>-->
-        <!--<version>2.0.1.Final</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-        <!--<groupId>org.hibernate</groupId>-->
-        <!--<artifactId>hibernate-validator</artifactId>-->
-        <!--<version>5.2.4.Final</version>-->
-        <!--</dependency>-->
 
         <!-- tools -->
         <dependency>
@@ -81,6 +54,11 @@
             <artifactId>commons-codec</artifactId>
             <version>1.10</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.5</version>
+        </dependency>
 
         <!-- jackson -->
         <dependency>
@@ -92,12 +70,6 @@
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-mapper-asl</artifactId>
             <version>1.9.13</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.5</version>
         </dependency>
 
         <!--Mybatis-plus-->

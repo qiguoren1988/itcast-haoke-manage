@@ -1,4 +1,4 @@
-package com.mmall.view;
+package com.mmall.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,7 +14,7 @@ import java.util.List;
  * @date 2020-01-08 0:17
  */
 @Configuration
-public class JsonView {
+class JsonViewConfig {
     @Bean
     public MappingJackson2JsonView mappingJackson2JsonView(){
         return new MappingJackson2JsonView();
