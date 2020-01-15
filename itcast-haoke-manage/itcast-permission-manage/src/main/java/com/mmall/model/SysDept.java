@@ -7,8 +7,11 @@ import lombok.ToString;
 
 import java.util.Date;
 
+//建造者方式
 @Builder
+//不需要参数的构造方法
 @NoArgsConstructor
+//需要全部参数的构造方法
 @AllArgsConstructor
 @ToString
 public class SysDept {
