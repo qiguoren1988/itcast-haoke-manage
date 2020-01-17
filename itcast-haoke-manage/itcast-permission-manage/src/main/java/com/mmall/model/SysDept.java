@@ -7,7 +7,7 @@ import lombok.ToString;
 
 import java.util.Date;
 
-//建造者方式
+//建造者模式
 @Builder
 //不需要参数的构造方法
 @NoArgsConstructor

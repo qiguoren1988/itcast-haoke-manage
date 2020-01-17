@@ -11,4 +11,7 @@ import org.springframework.stereotype.Service;
 public interface SysDeptService {
     //新增部门
     public void save(DeptParam param);
+
+    //更新部门
+    public void update(DeptParam param);
 }
